@@ -6,50 +6,55 @@
 <title>AK Engineering | Fire Protection Systems</title>
 <meta name="description" content="AK Engineering - design, supply, installation and commissioning of fire hydrant, sprinkler, gas suppression and fire alarm systems.">
 <style>
-:root{--bg:#fff;--ink:#14213d;--mute:#5b6477;--card:#f4f6fa;--line:#e1e5ee;--red:#d62828;--navy:#0b1b3a}
-@media (prefers-color-scheme:dark){:root{--bg:#0d1424;--ink:#eef1f8;--mute:#9aa5bd;--card:#151f36;--line:#243050}}
+:root{--bg:#fff;--ink:#2a1414;--mute:#6b5656;--card:#fbf4f3;--line:#ecd9d6;--red:#c8201a;--deep:#5a0b0b;--deep2:#a8191a;--glow:#ffb199}
+@media (prefers-color-scheme:dark){:root{--bg:#1a0c0c;--ink:#f6ecea;--mute:#c4a9a5;--card:#2a1414;--line:#4d2828;--red:#e63b2e}}
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
-nav{position:sticky;top:0;z-index:9;display:flex;justify-content:space-between;align-items:center;padding:12px 5%;background:var(--navy);color:#fff}
-nav b{letter-spacing:.5px}nav b span{color:var(--red)}
-nav div a{color:#cfd6e6;text-decoration:none;margin-left:18px;font-size:.92rem}
+nav{position:sticky;top:0;z-index:9;display:flex;justify-content:space-between;align-items:center;padding:12px 5%;background:var(--deep);color:#fff}
+nav b{letter-spacing:.5px}nav b span{color:var(--glow)}
+nav div a{color:#f1d4cf;text-decoration:none;margin-left:18px;font-size:.92rem}
 nav div a:hover{color:#fff}
-.hero{background:linear-gradient(135deg,var(--navy),#1d2f5c);color:#fff;padding:90px 5% 80px;text-align:center}
+.hero{background:linear-gradient(135deg,var(--deep),var(--deep2));color:#fff;padding:90px 5% 80px;text-align:center}
 .hero h1{font-size:clamp(2rem,6vw,3.6rem);line-height:1.15}
-.hero h1 em{color:#ff6b5e;font-style:normal}
-.hero p{max-width:640px;margin:18px auto 28px;color:#cfd6e6}
+.hero h1 em{color:#ffc857;font-style:normal}
+.hero p{max-width:640px;margin:18px auto 28px;color:#f6dcd7}
 .btn{display:inline-block;background:var(--red);color:#fff;padding:12px 26px;border-radius:30px;text-decoration:none;font-weight:600;border:0;cursor:pointer;font-size:1rem}
+.hero .btn{background:#ffc857;color:#4a0808}
 .btn:hover{filter:brightness(1.1)}
 .stats{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:44px}
-.stat{background:rgba(255,255,255,.08);border-radius:14px;padding:16px 26px}
-.stat b{display:block;font-size:2rem;color:#ff6b5e}
+.stat{background:rgba(255,255,255,.12);border-radius:14px;padding:16px 26px}
+.stat b{display:block;font-size:2rem;color:#ffc857}
 section{padding:70px 5%;max-width:1100px;margin:auto}
 h2{font-size:1.9rem;margin-bottom:6px}
 h2::after{content:"";display:block;width:54px;height:4px;background:var(--red);margin-top:8px;border-radius:2px}
 .sub{color:var(--mute);margin:14px 0 30px}
 .tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
-.tab,.chip{padding:10px 18px;border-radius:30px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font-size:.95rem}
-.tab.on,.chip.on{background:var(--red);color:#fff;border-color:var(--red)}
+.tab{padding:10px 18px;border-radius:30px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;font-size:.95rem}
+.tab.on{background:var(--red);color:#fff;border-color:var(--red)}
 .panel{display:none;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px}
-.panel.on{display:block;animation:f .3s}
+.panel.on{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center;animation:f .3s}
 @keyframes f{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
 .panel h3{font-size:1.3rem;margin-bottom:8px}
 .panel ul{margin:12px 0 0 20px;color:var(--mute)}
+.media{display:grid;gap:12px}
+.panel.two.on{grid-template-columns:1fr;gap:20px}
+.panel.two .media{grid-template-columns:1fr 1fr}
+.media img,.media .ph{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;border:1px solid var(--line);background:var(--line);display:block}
+.media .ph{display:flex;align-items:center;justify-content:center;color:var(--mute);font-size:.9rem}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin-top:22px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;border-top:4px solid var(--red);transition:transform .2s,box-shadow .2s}
-.card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,0,0,.12)}
-.card small{color:var(--red);font-weight:700;letter-spacing:.5px}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(90,11,11,.18)}
 .card h3{margin:6px 0;font-size:1.1rem}
 .card p{color:var(--mute);font-size:.93rem}
 .tag{display:inline-block;margin-top:10px;font-size:.78rem;padding:3px 10px;border-radius:20px;background:var(--line)}
-.hide{display:none}
-.cta{background:var(--navy);color:#fff;text-align:center;border-radius:20px;padding:44px 24px;margin:0 5% 60px}
-.cta p{color:#cfd6e6;margin:10px 0 22px}
+.cta{background:linear-gradient(135deg,var(--deep),var(--deep2));color:#fff;text-align:center;border-radius:20px;padding:44px 24px;margin:0 5% 60px}
+.cta p{color:#f6dcd7;margin:10px 0 22px}
 .contact{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
-.contact a{background:rgba(255,255,255,.1);color:#fff;text-decoration:none;padding:10px 18px;border-radius:12px;max-width:520px}.contact a:hover{background:var(--red)}
+.contact a{background:rgba(255,255,255,.14);color:#fff;text-decoration:none;padding:10px 18px;border-radius:12px;max-width:520px}.contact a:hover{background:#ffc857;color:#4a0808}
 footer{text-align:center;color:var(--mute);padding:24px;font-size:.85rem;border-top:1px solid var(--line)}
-@media print{nav,.tabs,.chip{display:none}.panel{display:block!important}}
+@media (max-width:760px){.panel.on{grid-template-columns:1fr}.panel.two .media{grid-template-columns:1fr}}
+@media print{nav,.tabs{display:none}.panel{display:block!important}}
 </style>
 </head>
 <body>
@@ -61,7 +66,7 @@ footer{text-align:center;color:var(--mute);padding:24px;font-size:.85rem;border-
 <a class="btn" href="#projects">View our projects</a>
 <div class="stats">
 <div class="stat"><b data-n="5">0</b>Key projects</div>
-<div class="stat"><b data-n="4">0</b>Core systems</div>
+<div class="stat"><b data-n="5">0</b>Core systems</div>
 <div class="stat"><b data-n="5">0</b>Years of project delivery</div>
 </div>
 </header>
@@ -71,31 +76,53 @@ footer{text-align:center;color:var(--mute);padding:24px;font-size:.85rem;border-
 <p class="sub">Select a system to see what we provide.</p>
 <div class="tabs" role="tablist">
 <button class="tab on" data-p="p1">Fire Hydrant</button>
+<button class="tab" data-p="p5">Fire Pump</button>
 <button class="tab" data-p="p2">Fire Sprinkler</button>
 <button class="tab" data-p="p3">Gas Suppression</button>
 <button class="tab" data-p="p4">Fire Alarm</button>
 </div>
-<div class="panel on" id="p1"><h3>Fire Hydrant System</h3><p>External and internal water-based firefighting networks for reliable water supply across the premises.</p><ul><li>Hydrant landing valves, hose reels and pipe network</li><li>Fire pump sets (main, jockey, standby)</li><li>Underground / above-ground piping and water storage interface</li><li>Testing and commissioning</li></ul></div>
-<div class="panel" id="p2"><h3>Fire Sprinkler System</h3><p>Automatic sprinkler protection that controls fire at its early stage in buildings and warehouses.</p><ul><li>Wet, dry and pre-action layouts as required</li><li>Sprinkler heads, control valves and flow switches</li><li>Hydraulic design as per applicable codes</li><li>Installation, flushing and hydro-testing</li></ul></div>
-<div class="panel" id="p3"><h3>Gas Suppression System</h3><p>Clean-agent protection for areas where water damages equipment, such as server rooms, control rooms and electrical panels.</p><ul><li>Agent cylinders, nozzles and release panels</li><li>Detection-linked automatic discharge</li><li>Room integrity and safety interlocks</li><li>Commissioning and handover</li></ul></div>
-<div class="panel" id="p4"><h3>Fire Alarm System</h3><p>Early detection and alert system that gives occupants time to respond.</p><ul><li>Smoke and heat detectors, manual call points</li><li>Addressable control panels and hooters</li><li>Integration with suppression and building systems</li><li>Programming, testing and handover</li></ul></div>
+
+<div class="panel on" id="p1">
+<div class="txt"><h3>Fire Hydrant System</h3><p>External and internal water-based firefighting networks for reliable water supply across the premises.</p><ul><li>Hydrant landing valves, hose reels and pipe network</li><li>Fire pump sets (main, jockey, standby)</li><li>Underground / above-ground piping and water storage interface</li><li>Testing and commissioning</li></ul></div>
+<div class="media"><img src="https://ankur0208.github.io/AK-Engineering/hydrant_system.jpeg" alt="Fire hydrant system installation" loading="lazy"></div>
+</div>
+
+<div class="panel two" id="p5">
+<div class="txt"><h3>Fire Pump</h3><p>Pump sets that keep the fire network pressurised and ready to deliver water the moment it is needed.</p><ul><li>Main, jockey and standby pump sets</li><li>Pump controllers and control panels</li><li>Suction and delivery piping with valves</li><li>Flow testing and commissioning</li></ul></div>
+<div class="media">
+<img src="https://ankur0208.github.io/AK-Engineering/fire_pump1.jpeg" alt="Fire pump set installation" loading="lazy">
+<img src="https://ankur0208.github.io/AK-Engineering/fire_pump2.jpeg" alt="Fire pump room piping and valves" loading="lazy">
+</div>
+</div>
+
+<div class="panel two" id="p2">
+<div class="txt"><h3>Fire Sprinkler System</h3><p>Automatic sprinkler protection that controls fire at its early stage in buildings and warehouses.</p><ul><li>Wet, dry and pre-action layouts as required</li><li>Sprinkler heads, control valves and flow switches</li><li>Hydraulic design as per applicable codes</li><li>Installation, flushing and hydro-testing</li></ul></div>
+<div class="media">
+<img src="https://ankur0208.github.io/AK-Engineering/sprinkler_system1.jpeg" alt="Fire sprinkler piping installation" loading="lazy">
+<img src="https://ankur0208.github.io/AK-Engineering/sprinkler_system2.jpeg" alt="Fire sprinkler heads installed" loading="lazy">
+</div>
+</div>
+
+<div class="panel" id="p3">
+<div class="txt"><h3>Gas Suppression System</h3><p>Clean-agent protection for areas where water damages equipment, such as server rooms, control rooms and electrical panels.</p><ul><li>Agent cylinders, nozzles and release panels</li><li>Detection-linked automatic discharge</li><li>Room integrity and safety interlocks</li><li>Commissioning and handover</li></ul></div>
+<div class="media"><img src="https://ankur0208.github.io/AK-Engineering/gas_suppression.jpeg" alt="Gas suppression cylinders and piping" loading="lazy"></div>
+</div>
+
+<div class="panel" id="p4">
+<div class="txt"><h3>Fire Alarm System</h3><p>Early detection and alert system that gives occupants time to respond.</p><ul><li>Smoke and heat detectors, manual call points</li><li>Addressable control panels and hooters</li><li>Integration with suppression and building systems</li><li>Programming, testing and handover</li></ul></div>
+<div class="media"><img src="https://ankur0208.github.io/AK-Engineering/alarm_system.jpeg" alt="Fire alarm system panel and devices" loading="lazy"></div>
+</div>
 </section>
 
 <section id="projects">
 <h2>Project Experience</h2>
-<p class="sub">Filter by period.</p>
-<div class="tabs">
-<button class="chip on" data-f="all">All</button>
-<button class="chip" data-f="2021">2021-22</button>
-<button class="chip" data-f="2025">2025</button>
-<button class="chip" data-f="2026">2026</button>
-</div>
+<p class="sub">Some of the projects we have delivered.</p>
 <div class="grid">
-<div class="card" data-y="2021"><small>NOV 2021 - OCT 2022</small><h3>Camlin Fine Science Limited</h3><p>Dahej, Gujarat</p><span class="tag">Industrial / Chemicals</span></div>
-<div class="card" data-y="2025 2026"><small>2025 - 2026</small><h3>DP World</h3><p>Mumbai, Maharashtra</p><span class="tag">Ports &amp; Logistics</span></div>
-<div class="card" data-y="2025"><small>2025</small><h3>Anant National University</h3><p>Ahmedabad, Gujarat</p><span class="tag">Institutional</span></div>
-<div class="card" data-y="2025 2026"><small>2025 - 2026</small><h3>Sai Life Sciences</h3><p>Life sciences facility</p><span class="tag">Pharma / Life Sciences</span></div>
-<div class="card" data-y="2026"><small>2026</small><h3>Golden Willows, Mayflower</h3><p>Hiranandani</p><span class="tag">Residential</span></div>
+<div class="card"><h3>Camlin Fine Science Limited</h3><p>Dahej, Gujarat</p><span class="tag">Industrial / Chemicals</span></div>
+<div class="card"><h3>DP World</h3><p>Mumbai, Maharashtra</p><span class="tag">Ports &amp; Logistics</span></div>
+<div class="card"><h3>Anant National University</h3><p>Ahmedabad, Gujarat</p><span class="tag">Institutional</span></div>
+<div class="card"><h3>Sai Life Sciences</h3><p>Life sciences facility</p><span class="tag">Pharma / Life Sciences</span></div>
+<div class="card"><h3>Golden Willows, Mayflower</h3><p>Hiranandani</p><span class="tag">Residential</span></div>
 </div>
 </section>
 
@@ -106,6 +133,8 @@ footer{text-align:center;color:var(--mute);padding:24px;font-size:.85rem;border-
 <a href="tel:+919702153220">&#9742; +91 97021 53220</a><a href="tel:+919260937481">&#9742; +91 92609 37481</a><a href="mailto:akengineering112@gmail.com">&#9993; akengineering112@gmail.com</a>
 <a href="https://www.google.com/maps/search/?api=1&query=Ganesh+Nagar+Church+Road+Chitalsar+Manpada+Thane+400607" target="_blank" rel="noopener">&#128205; Off. No.2496, Ganesh Nagar, Church Road, Near Sanket Vidyalaya, Chitalsar, Manpada, Thane (W) 400607, Maharashtra, India</a>
 </div>
+</div>
+
 <footer>&copy; <span id="y"></span> AK Engineering. All rights reserved.</footer>
 
 <script>
@@ -113,10 +142,8 @@ document.querySelectorAll('.tab').forEach(function(t){t.onclick=function(){
 document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on')});
 document.querySelectorAll('.panel').forEach(function(x){x.classList.remove('on')});
 t.classList.add('on');document.getElementById(t.dataset.p).classList.add('on')}});
-document.querySelectorAll('.chip').forEach(function(c){c.onclick=function(){
-document.querySelectorAll('.chip').forEach(function(x){x.classList.remove('on')});c.classList.add('on');
-document.querySelectorAll('.card').forEach(function(k){
-k.classList.toggle('hide',c.dataset.f!=='all'&&k.dataset.y.indexOf(c.dataset.f)<0)})}});
+document.querySelectorAll('.media img').forEach(function(img){img.onerror=function(){
+var d=document.createElement('div');d.className='ph';d.textContent='Image unavailable';img.replaceWith(d)}});
 document.querySelectorAll('[data-n]').forEach(function(e){var n=+e.dataset.n,i=0;
 var t=setInterval(function(){e.textContent=++i;if(i>=n)clearInterval(t)},180)});
 document.getElementById('y').textContent=new Date().getFullYear();
